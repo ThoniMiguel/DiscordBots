@@ -19,7 +19,6 @@ function returnCommands() {
   const commandFiles = fs
     .readdirSync("./commands/")
     .filter((file) => file.endsWith(".js"));
-    console.log(commandFiles);
 
     let temp = new Array();
     for(let fileNames of commandFiles){
