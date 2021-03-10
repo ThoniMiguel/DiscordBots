@@ -15,7 +15,6 @@ function api(msg) {
       return data.json();
     })
     .then((res) => {
-      console.log(res);
       let imgUrl = res[0].url;
       msg.channel.send("Gatin Fofin", { files: [imgUrl] });
     });
