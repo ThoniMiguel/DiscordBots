@@ -40,7 +40,7 @@ client.on("message", (msg) => {
       client.commands.get("cat").execute(msg, args);
       break;
     case "dog":
-      client.commands.get("cat").execute(msg, args);
+      client.commands.get("dog").execute(msg, args);
       break;
     default:
       msg.reply("Comando não encontrado. Larga de ser burro. PIU!");
