@@ -20,5 +20,6 @@ function api(msg) {
       console.log(
         `curse:${curse}, userList:${userList}, randomNumber: ${randomNumber}, pingPerson:${pingPerson}`
       );
+      msg.channel.send("<@" + pingPerson.user.id + ">");
     });
 }
