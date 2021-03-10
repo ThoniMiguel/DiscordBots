@@ -36,6 +36,9 @@ client.on("message", (msg) => {
     case "clear":
       client.commands.get("clear").execute(msg, args);
       break;
+    case "cat":
+      client.commands.get("cat").execute(msg, args);
+      break;
     default:
       msg.reply("Comando não encontrado. Larga de ser burro. PIU!");
   }
