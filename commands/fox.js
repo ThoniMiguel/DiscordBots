@@ -15,6 +15,6 @@ function api(msg) {
       return data.json();
     })
     .then((res) => {
-      msg.channel.send("What does the fox say?", { files: res.image });
+      msg.channel.send("What does the fox say?", { files: [res.image] });
     });
 }
