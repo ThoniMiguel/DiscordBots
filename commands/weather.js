@@ -15,8 +15,8 @@ function api(msg, args) {
     msg.reply("Comando vazio???Quer me fuder porra?!... PIU CARALHO!!");
     return;
   } else {
-    let cityName = args[0];
-    let url = `api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
+    let cityName = args[0]; //api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=london&appid=afdf4bc6fc4046f3c58451311b52990b`;
     console.log(`city name: ${cityName}`);
     fetch(url)
       .then((data) => {
