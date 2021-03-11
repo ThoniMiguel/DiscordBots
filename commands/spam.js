@@ -11,7 +11,7 @@ module.exports = {
       return;
     } else {
       for (let i = 0; i < number; i++) {
-        $msg.channel.send(message);
+        msg.channel.send(message);
       }
     }
   },
