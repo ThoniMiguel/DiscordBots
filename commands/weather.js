@@ -16,9 +16,11 @@ function api(msg, args) {
     return;
   } else {
     let cityName = args[0];
-    let url = `http://www.api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
+    let url = `api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
     fetch(url)
-      .then((data) => data.json())
+      .then((data) => {
+        return data.json();
+      })
       .then((res) => {
         console.log(res);
       });
