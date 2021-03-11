@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 module.exports = {
-  name: "image",
+  name: "happy",
   description: "searching cursed images on google",
   execute(msg, args) {
     happy(msg);
