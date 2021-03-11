@@ -15,6 +15,6 @@ function happy(msg) {
       return data.json();
     })
     .then((res) => {
-      console.log(res);
+      msg.reply(res.affirmation);
     });
 }
