@@ -8,9 +8,9 @@ module.exports = {
     } else {
       let message = args[0];
       let number = args[1];
-
+      const maxSpams = 5;
       number = parseInt(number);
-      if (message.length > 30 || isNaN(number) || number > 8) {
+      if (message.length > 30 || isNaN(number) || number > maxSpams) {
         msg.reply("Comando ta meio errado ai neh... tenta denovo... PIU!");
         console.log(message);
         return;
