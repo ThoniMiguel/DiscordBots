@@ -45,6 +45,14 @@ async function insertPushUp(rep) {
         "Repetitions:" +
         rep
     );
+    const doc = {
+      Repetition: rep,
+      SimpleDate: simpleDate,
+      SimpleFullDate: simpleFullDate,
+      fullDate: fullDate
+    }
+    const result = await pushupCollection.insertOne(doc);
+    console.log(`${result.insertedCount} documents were inserted with the _id: ${result.insertedId}`);
 
   } finally {
     client.close();
