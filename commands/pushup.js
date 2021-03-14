@@ -23,11 +23,11 @@ async function insertPushUp(rep) {
     const pushupCollection = database.collection("pushupsCollection");
     // doc to be inserted
     let fullDate = new Date();
-    let fullDateBrazil = fullDate.setHours(fullDate.getHours() - 3);
-    let simpleFullDate = fullDate.toLocaleString("pt-BR", {
+    let fullDateBrazil = fullDate.setHours(fullDate.getHours() - 4);
+    let simpleFullDate = fullDateBrazil.toLocaleString("pt-BR", {
       timezone: "Brasil/Brasilia",
     });
-    let simpleDate = `${fullDate.getDate()}/${fullDate.getMonth() + 1}`;
+    let simpleDate = `${fullDateBrazil.getDate()}/${fullDateBrazil.getMonth() + 1}`;
     console.log(
       fullDate +
         "\n" +
