@@ -1,4 +1,4 @@
-const cod = require("call-of-duty-api")({plataform: "battle"});
+const cod = require("call-of-duty-api")({platform: "battle"});
 module.exports = {
   name: "mpcheck",
   description: "This command return some call of duty shit",
