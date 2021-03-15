@@ -11,7 +11,8 @@ module.exports = {
 
     try{
       await cod.login(username, password);
-      let data = await cod.CWmp("Wanok#11339", "battle");
+      let data = await cod.CWmp("DariusFlynt#11348", "battle");
+      //ohfuck
       console.log(data);
     }catch(error){
       msg.channel.send("Aconteceu um erro ao buscar esse jogador... :neutral_face: ");
