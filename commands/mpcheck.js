@@ -11,7 +11,8 @@ module.exports = {
 
     try{
       await cod.login(username, password);
-      let data = await cod.CWmp("DariusFlynt#11348", "battle");
+      // let data = await cod.CWmp("DariusFlynt#11348", "battle");
+      let data = await cod.MWmp("DariusFlynt#11348", "battle");
       //ohfuck
       console.log(data);
     }catch(error){
