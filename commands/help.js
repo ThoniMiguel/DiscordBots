@@ -3,7 +3,7 @@ const fs = require("fs");
 module.exports = {
   name: "help",
   description: "Show a list of available commands",
-  execute(msg, args) {
+  execute(client, msg, args) {
     let commands = returnCommands();
     let commandsCapitalized = new Array();
     for(let i = 0; i < commands.length; i++){

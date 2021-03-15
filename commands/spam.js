@@ -1,7 +1,7 @@
 module.exports = {
   name: "spam",
   description: "spam msgs",
-  execute(msg, args) {
+  execute(client, msg, args) {
     if (args.length == 0) {
       msg.reply("Comando vazio???Quer me fuder porra?!... PIU");
       return;

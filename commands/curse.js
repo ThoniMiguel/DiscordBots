@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 module.exports = {
   name: "curse",
   discription: "curse random user",
-  execute(msg, args) {
+  execute(client, msg, args) {
     api(msg);
   },
 };
