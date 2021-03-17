@@ -14,16 +14,16 @@ module.exports = {
   execute(client, msg, args) {
     if (msg.author.username === "The_Joker") {
       if (args.length === 0) {
-        insertPushUp(10).catch(console.dir);
+        insertPushUp(10, msg).catch(console.dir);
         return;
       } else if (args.length > 0) {
-        insertPushUp(args[0]).catch(console.dir);
+        insertPushUp(args[0],msg).catch(console.dir);
       }
     }
   },
 };
 
-async function insertPushUp(rep) {
+async function insertPushUp(rep, msg) {
   await client.connect({ useNewUrlParser: true });
   const database = client.db("PushUps");
   const pushupCollection = database.collection("pushupsCollection");
@@ -57,4 +57,6 @@ async function insertPushUp(rep) {
   console.log(
     `${result.insertedCount} documents were inserted with the _id: ${result.insertedId}`
   );
+  msg.reply("Guardei lá no banco de dados :sunglasses: :pinched_fingers:");
+  
 }
