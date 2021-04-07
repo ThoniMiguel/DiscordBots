@@ -4,11 +4,13 @@ module.exports = {
     description:"Search for yt videos (only returns the first element)",
     execute(client, msg, args, Discord, cmd){
         let argsJoined;
-        if(args.length > 1){
-            argsJoined = args.join(" ");
-            ytSearch(argsJoined, Discord, msg);
-        }else{
-            ytSearch(args[0], Discord, msg);
+        if(args.length >= 0){
+            if(args.length > 1){
+                argsJoined = args.join(" ");
+                ytSearch(argsJoined, Discord, msg);
+            }else{
+                ytSearch(args[0], Discord, msg);
+            }
         }
     }
 }
