@@ -40,6 +40,5 @@ async function phSearch(args, Discord, msg){
         .setTitle(results.title)
         .setURL(results.link)
         .setImage(img)
-        .setFooter()
         msg.channel.send(embed);
 }
