@@ -11,7 +11,7 @@ module.exports = {
 
         if(args.length >= 0){
             argsJoin = args.join(" ");
-            phSearch(argsJoin, Discord, msg);
+            phSearch(argsJoin, Discord, msg, page);
             // const video = await ph.search(argsJoin).catch((err) => {console.dir(err)});
             // console.log(video.results[random]);
             // if(args.length > 1){
@@ -27,15 +27,15 @@ module.exports = {
 }
 
 
-async function phSearch(args, Discord, msg){
+async function phSearch(args, Discord, msg, page){
 
         const p = await ph.search(args, ['thumbnail_url']);
         let min = 0;
         let max = p.results.length;
         let random = Math.floor(Math.random()*(max-min+1)+min);
         let results = p.results[random];
-        const page = await ph.page(results.link, ['thumbnail_url']);
-        let img = page.thumbnail_url;
+        const pages = await ph.page(results.link, ['thumbnail_url']);
+        let img = pages.thumbnail_url;
         console.log(results);
         const embed = new Discord.MessageEmbed()
         .setTitle(results.title)
