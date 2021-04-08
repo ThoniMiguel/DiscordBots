@@ -36,6 +36,7 @@ async function phSearch(args, Discord, msg){
         let results = p.results[random];
         const page = await ph.page(results.link, ['thumbnail_url']);
         let img = page.thumbnail_url;
+        console.log(results);
         const embed = new Discord.MessageEmbed()
         .setTitle(results.title)
         .setURL(results.link)
